@@ -32,44 +32,8 @@
             "bin/subsystem_files/pid.cpp.o",
             "src\\subsystem_files\\pid.cpp"
         ],
-        "directory": "C:\\Users\\spore\\Documents\\VEX\\xdrive",
+        "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
         "file": "src\\subsystem_files\\pid.cpp"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-fno-ms-extensions",
-            "-fno-ms-compatibility",
-            "-fno-delayed-template-parsing",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
-            "-iquote./include",
-            "-iquote./include/subsystem_files/",
-            "-mcpu=cortex-a9",
-            "-mfpu=neon-fp16",
-            "-mfloat-abi=softfp",
-            "-Os",
-            "-g",
-            "-D_POSIX_THREADS",
-            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
-            "-ffunction-sections",
-            "-fdata-sections",
-            "-fdiagnostics-color",
-            "-funwind-tables",
-            "--std=gnu++17",
-            "-o",
-            "bin/subsystem_files/drive.cpp.o",
-            "src\\subsystem_files\\drive.cpp"
-        ],
-        "directory": "C:\\Users\\spore\\Documents\\VEX\\xdrive",
-        "file": "src\\subsystem_files\\drive.cpp"
     },
     {
         "arguments": [
@@ -104,7 +68,7 @@
             "bin/subsystem_files/globals.cpp.o",
             "src\\subsystem_files\\globals.cpp"
         ],
-        "directory": "C:\\Users\\spore\\Documents\\VEX\\xdrive",
+        "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
         "file": "src\\subsystem_files\\globals.cpp"
     },
     {
@@ -123,7 +87,7 @@
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
             "-iquote./include",
-            "-iquote./include/./",
+            "-iquote./include/subsystem_files/",
             "-mcpu=cortex-a9",
             "-mfpu=neon-fp16",
             "-mfloat-abi=softfp",
@@ -137,11 +101,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/main.cpp.o",
-            "src\\main.cpp"
+            "bin/subsystem_files/drive.cpp.o",
+            "src\\subsystem_files\\drive.cpp"
         ],
-        "directory": "C:\\Users\\spore\\Documents\\VEX\\xdrive",
-        "file": "src\\main.cpp"
+        "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
+        "file": "src\\subsystem_files\\drive.cpp"
     },
     {
         "arguments": [
@@ -176,7 +140,43 @@
             "bin/subsystem_files/sensors.cpp.o",
             "src\\subsystem_files\\sensors.cpp"
         ],
-        "directory": "C:\\Users\\spore\\Documents\\VEX\\xdrive",
+        "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
         "file": "src\\subsystem_files\\sensors.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-iquote./include",
+            "-iquote./include/./",
+            "-mcpu=cortex-a9",
+            "-mfpu=neon-fp16",
+            "-mfloat-abi=softfp",
+            "-Os",
+            "-g",
+            "-D_POSIX_THREADS",
+            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fdiagnostics-color",
+            "-funwind-tables",
+            "--std=gnu++17",
+            "-o",
+            "bin/main.cpp.o",
+            "src\\main.cpp"
+        ],
+        "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
+        "file": "src\\main.cpp"
     }
 ]
