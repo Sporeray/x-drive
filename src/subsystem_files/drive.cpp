@@ -3,8 +3,8 @@
 
 
 //helper functions
-void setDrive(int chy, int chx,int anglular,int angle) { //Channel X and Channel Y
-  double theta = (angle/(double)360) *(6.283);
+void setDrive(int chy, int chx,int anglular,double angle) { //Channel X and Channel Y
+  double theta = ConvertRads(angle);
 
   driveFront = (cos(theta)*chx-sin(theta)*chy)+anglular;
   driveLeft = (cos(theta)*chy+sin(theta)*chx)+anglular;
@@ -13,7 +13,7 @@ void setDrive(int chy, int chx,int anglular,int angle) { //Channel X and Channel
 }
 
 //Driver control
-void setDriveMotors(int angle){
+void setDriveMotors(double angle){
   int l_vertical_stick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
   int l_horizontal_stick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_X);
   int r_horizontal_stick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
@@ -24,8 +24,3 @@ void setDriveMotors(int angle){
     setDrive(0,0,0,angle);
   }
 }
-
- //Auton
- void translate(int x_units,int y_units,int voltage){
-
- }

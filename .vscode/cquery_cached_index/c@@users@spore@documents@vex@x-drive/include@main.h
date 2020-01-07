@@ -76,6 +76,7 @@ void opcontrol(void);
 #include "subsystem_headers/globals.hpp"
 #include "subsystem_headers/sensors.hpp"
 #include "subsystem_headers/pid.hpp"
+#include "subsystem_headers/utility.hpp"
 #endif
 
 #endif  // _PROS_MAIN_H_

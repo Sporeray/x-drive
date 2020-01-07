@@ -29,11 +29,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/subsystem_files/pid.cpp.o",
-            "src\\subsystem_files\\pid.cpp"
+            "bin/subsystem_files/sensors.cpp.o",
+            "src\\subsystem_files\\sensors.cpp"
         ],
         "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
-        "file": "src\\subsystem_files\\pid.cpp"
+        "file": "src\\subsystem_files\\sensors.cpp"
     },
     {
         "arguments": [
@@ -137,11 +137,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/subsystem_files/sensors.cpp.o",
-            "src\\subsystem_files\\sensors.cpp"
+            "bin/subsystem_files/pid.cpp.o",
+            "src\\subsystem_files\\pid.cpp"
         ],
         "directory": "C:\\Users\\spore\\Documents\\VEX\\x-drive",
-        "file": "src\\subsystem_files\\sensors.cpp"
+        "file": "src\\subsystem_files\\pid.cpp"
     },
     {
         "arguments": [

@@ -44,11 +44,8 @@ double avgEncoderValue(int angle){
   for (int i = 0; i < 4; i++){
     if (axis_arr[i] == 1){
       av_value += (rel[i]/scalar[i])/3;//measures vertical movement
-      //av_value_x += (rel[(i+2)%4]/scalar_x[i])/3;//measures horiztonal movement
     }
   }
-  //printf("av_value_y %f \n",av_value_y);
-  //printf("av_value_x %f \n \n",av_value_x);
   return av_value;
 }
 //Helper functions
@@ -63,7 +60,7 @@ double* getRealMovement(){
 }
 
 double* designateScalars(int angle){
-  double theta = (angle/(double)360) * (6.283);
+  double theta = ConvertRads(angle);
   double* arr = new double[4];
   arr[0] = sin(theta);
   arr[1] = cos(theta+.785);
@@ -74,10 +71,6 @@ double* designateScalars(int angle){
 
 int* designateAxis(int angle){
   int* arr = new int[4] {1,1,1,1} ;
-  //arr[0] = 1;
-  //arr[1] = 1;
-  //arr[2] = 1;
-  //arr[3] = 1;
   if ((0 <= angle && angle < 22.5)||(157.5 <= angle && angle < 180)){
   //rel_x is invalid forward and rel_y is invalid sideways
     arr[0] = 0;

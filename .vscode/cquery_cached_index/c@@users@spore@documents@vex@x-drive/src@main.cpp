@@ -28,10 +28,10 @@ void initialize() {
 	driveLeft.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 	driveBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 	driveRight.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	pros::ADIGyro gyro('B', 0.972); //Gyro Scale
-	pros::delay(2000);
+	//pros::ADIGyro gyro('B', 0.972); //Gyro Scale
+	//pros::delay(2000);
 	//float gyrodrift = calculateGyroDrift();
-
+	//printf("gyro drift = %f \n",gyrodrift);
 
 }
 
@@ -65,47 +65,25 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	//translate(10, 127);
-
-
+	double angle = 0;
+	move(300,300,0,angle);
 }
-
-
-
-
 
 
 void opcontrol() {
-	autonomous();
-	double y[3] = {0,0,0}; //{derivative,velocity,intergral}
-	double x[3] = {0,0,0}; //{derivative,velocity,intergral}
-	double rot[3] = {0,0,0};//{derivative,velocity,intergral}}
+	//autonomous();
 	double angle = 0;
-	int delay = 10;
 	while(true){
-		pros::delay(delay);
-		//gyrovalue = updateGyroValue(gyrovalue,gyrodrift);
-		//pros::delay(10); //keeps in sync with actual motor tick rate
+		pros::delay(10);
 		setDriveMotors(angle);
-		//gyro.reset();
-		//printf("Left External Encoder: %d \n", leftEncoder.get_value());
-		//printf("Right External Encoder: %d \n", rightEncoder.get_value());
-		//printf("Top Wheel Encoder: %f \n", -driveFront.get_position());
-		//printf("Bottom Wheel Encoder: %f \n", +driveBack.get_position());
-
-	  getPIDValues(y,avgEncoderValue(angle));
-		getPIDValues(x,avgEncoderValue(angle+270));
-		getPIDValues(rot,avgRotation());
-		resetEncoders();
-		angle = rot[2]*0.327;
-
-		printf("Rot intergral: %f \n", rot[2]);
-		printf("Rot velocity: %f \n", rot[1]);
-		printf("Rot derivative: %f \n", rot[0]);
-		//printf("X intergral: %f \n", x_int);
-		//printf("Rotation: %f \n\n", rot_vel);
-		printf("\n");
-
-
+		printf("F");
 	}
 }
+
+//printf("Rot intergral: %f \n", rot[2]);
+//printf("Rot velocity: %f \n", rot[1]);
+//printf("Rot derivative: %f \n", rot[0]);
+//printf("X intergral: %f \n", x_int);
+//printf("Rotation: %f \n\n", rot_vel);
+//printf("Gyro Value = %f\n",gyrovalue);
+//printf("\n");
